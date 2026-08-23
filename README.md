@@ -2,6 +2,14 @@
 
 An interactive, line-based six degree-of-freedom robot arm simulator built with Three.js and Vite.
 
+## Preview
+
+![Six Axis simulator in the Home pose](screenshots/home-pose.jpg)
+
+| Reach pose | Inspect pose |
+| --- | --- |
+| ![Six Axis simulator in the Reach pose](screenshots/reach-pose.jpg) | ![Six Axis simulator in the Inspect pose](screenshots/inspect-pose.jpg) |
+
 ## Run locally
 
 ```bash
