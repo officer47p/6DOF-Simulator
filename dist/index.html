@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f2f3ed" />
+    <meta
+      name="description"
+      content="An interactive six degree-of-freedom robot arm simulator built with Three.js."
+    />
+    <title>Six Axis — 6DOF Arm Simulator</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <script type="module" crossorigin src="/assets/index-CcaCRQGs.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BwY_1y8n.css">
+  </head>
+  <body>
+    <div id="app">
+      <header class="site-header">
+        <a class="brand" href="#" aria-label="Six Axis home">
+          <span class="brand-mark" aria-hidden="true">
+            <i></i><i></i><i></i>
+          </span>
+          <span>SIX AXIS</span>
+        </a>
+        <div class="header-meta">
+          <span class="live-dot"></span>
+          <span>FORWARD KINEMATICS</span>
+          <span class="build-tag">THREE.JS / 001</span>
+        </div>
+      </header>
+
+      <main>
+        <section class="intro" aria-labelledby="page-title">
+          <div>
+            <p class="eyebrow">INTERACTIVE ROBOTICS LAB</p>
+            <h1 id="page-title">Six degrees.<br /><em>One continuous motion.</em></h1>
+          </div>
+          <p class="lede">
+            Explore forward kinematics through a minimal line model. Tune each joint,
+            orbit the workspace, and watch the tool pose propagate through the chain.
+          </p>
+        </section>
+
+        <section class="simulator-shell">
+          <aside class="control-panel" aria-label="Joint controls">
+            <div class="panel-heading">
+              <div>
+                <p class="section-label">JOINT INPUT</p>
+                <h2>Axis control</h2>
+              </div>
+              <button id="reset-button" class="icon-button" type="button" aria-label="Reset all joints">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.9 7.5A8 8 0 1 1 4 14M4.9 7.5V3.8m0 3.7h3.7"/></svg>
+              </button>
+            </div>
+
+            <div id="joint-controls" class="joint-controls"></div>
+
+            <div class="presets" aria-label="Arm presets">
+              <p class="section-label">QUICK POSES</p>
+              <div class="preset-buttons">
+                <button type="button" data-preset="home" class="active">HOME</button>
+                <button type="button" data-preset="reach">REACH</button>
+                <button type="button" data-preset="inspect">INSPECT</button>
+              </div>
+            </div>
+
+            <div class="hint">
+              <span class="mouse-icon" aria-hidden="true"></span>
+              <p><strong>Drag</strong> to orbit · <strong>Scroll</strong> to zoom</p>
+            </div>
+          </aside>
+
+          <div class="viewport-panel">
+            <div class="viewport-topbar">
+              <div class="view-label"><span>01</span><strong>PERSPECTIVE</strong></div>
+              <div class="viewport-actions">
+                <button id="toggle-axes" type="button" class="text-button active">AXES</button>
+                <button id="fit-view" type="button" class="text-button">FIT VIEW</button>
+              </div>
+            </div>
+
+            <div id="scene-container" aria-label="Interactive 3D model of a six-axis robot arm"></div>
+
+            <div class="axis-legend" aria-hidden="true">
+              <span><i class="axis-x"></i>X</span>
+              <span><i class="axis-y"></i>Y</span>
+              <span><i class="axis-z"></i>Z</span>
+            </div>
+
+            <div class="pose-card">
+              <p class="section-label">TOOL CENTER POINT</p>
+              <div class="pose-grid">
+                <div><span>X</span><strong id="position-x">0.000</strong></div>
+                <div><span>Y</span><strong id="position-y">0.000</strong></div>
+                <div><span>Z</span><strong id="position-z">0.000</strong></div>
+              </div>
+              <div class="orientation-row">
+                <span>ORIENTATION</span>
+                <strong id="orientation-value">0° / 0° / 0°</strong>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <footer>
+          <p>6DOF SERIAL MANIPULATOR</p>
+          <p>FORWARD KINEMATICS · REAL-TIME</p>
+        </footer>
+      </main>
+    </div>
+  </body>
+</html>
