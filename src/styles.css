@@ -306,6 +306,8 @@ input[type='range']::-moz-range-thumb { width: 11px; height: 11px; border: 2px s
 
 footer { height: 78px; display: flex; justify-content: space-between; align-items: center; font-family: 'DM Mono', monospace; font-size: 8px; letter-spacing: .13em; color: var(--muted); }
 footer p:last-child::before { content: ''; display: inline-block; width: 34px; height: 1px; vertical-align: middle; background: var(--orange); margin-right: 9px; }
+footer a { color: var(--ink); text-underline-offset: 3px; }
+footer a:hover, footer a:focus-visible { color: var(--orange); }
 
 @media (max-width: 900px) {
   .intro { grid-template-columns: 1fr; min-height: auto; padding-top: 40px; }

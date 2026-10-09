@@ -2,6 +2,8 @@
 
 An interactive, line-based six degree-of-freedom robot arm simulator built with Three.js and Vite.
 
+Created by [officer47p](https://github.com/officer47p).
+
 ## Preview
 
 ![Six Axis simulator in the Home pose](screenshots/home-pose.jpg)
